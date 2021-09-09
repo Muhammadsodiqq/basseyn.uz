@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/afzalliklars",
+      "handler": "afzalliklar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/afzalliklars/count",
+      "handler": "afzalliklar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/afzalliklars/:id",
+      "handler": "afzalliklar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/afzalliklars",
+      "handler": "afzalliklar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/afzalliklars/:id",
+      "handler": "afzalliklar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/afzalliklars/:id",
+      "handler": "afzalliklar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

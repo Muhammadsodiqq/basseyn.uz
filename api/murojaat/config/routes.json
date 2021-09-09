@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/murojaats",
+      "handler": "murojaat.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/murojaats/count",
+      "handler": "murojaat.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/murojaats/:id",
+      "handler": "murojaat.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/murojaats",
+      "handler": "murojaat.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/murojaats/:id",
+      "handler": "murojaat.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/murojaats/:id",
+      "handler": "murojaat.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

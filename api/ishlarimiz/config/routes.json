@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ishlarimizs",
+      "handler": "ishlarimiz.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ishlarimizs/count",
+      "handler": "ishlarimiz.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ishlarimizs/:id",
+      "handler": "ishlarimiz.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ishlarimizs",
+      "handler": "ishlarimiz.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ishlarimizs/:id",
+      "handler": "ishlarimiz.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ishlarimizs/:id",
+      "handler": "ishlarimiz.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

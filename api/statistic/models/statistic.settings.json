@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "statistika",
+  "info": {
+    "name": "statistic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "klientlat": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "regex": "^[0-9]+$",
+      "required": true
+    },
+    "basseynlar": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "regex": "^[0-9]+$",
+      "required": true
+    },
+    "founded": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "regex": "^[0-9]+$"
+    },
+    "fontan": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "regex": "^[0-9]+$",
+      "required": true
+    }
+  }
+}

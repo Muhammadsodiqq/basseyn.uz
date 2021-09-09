@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "murojaat",
+  "info": {
+    "name": "murojaat"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "phone": {
+      "type": "string",
+      "regex": "^\\+[1-9]{1}[0-9]{3,14}$",
+      "required": true,
+      "minLength": 4,
+      "maxLength": 30
+    }
+  }
+}

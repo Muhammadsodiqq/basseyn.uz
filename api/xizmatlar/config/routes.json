@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/xizmatlars",
+      "handler": "xizmatlar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/xizmatlars/count",
+      "handler": "xizmatlar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/xizmatlars/:id",
+      "handler": "xizmatlar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/xizmatlars",
+      "handler": "xizmatlar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/xizmatlars/:id",
+      "handler": "xizmatlar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/xizmatlars/:id",
+      "handler": "xizmatlar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

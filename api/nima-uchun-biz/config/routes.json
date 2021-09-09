@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nima-uchun-biz",
+      "handler": "nima-uchun-biz.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nima-uchun-biz",
+      "handler": "nima-uchun-biz.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nima-uchun-biz",
+      "handler": "nima-uchun-biz.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

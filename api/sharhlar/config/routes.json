@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sharhlars",
+      "handler": "sharhlar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sharhlars/count",
+      "handler": "sharhlar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sharhlars/:id",
+      "handler": "sharhlar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sharhlars",
+      "handler": "sharhlar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sharhlars/:id",
+      "handler": "sharhlar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sharhlars/:id",
+      "handler": "sharhlar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
