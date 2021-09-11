@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/07/2021 10:52:37 PM"
+    "x-generation-date": "09/11/2021 12:51:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2197,13 +2197,13 @@
         ]
       }
     },
-    "/navbars": {
+    "/navbar": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the navbar's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve navbar document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -2389,194 +2389,12 @@
           }
         ]
       },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Navbar"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Navbar"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewNavbar"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/navbars/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Navbar"
-        ],
-        "parameters": []
-      }
-    },
-    "/navbars/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Navbar"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Navbar"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single navbar record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve navbar document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -2631,25 +2449,14 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single navbar record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single navbar based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -2694,18 +2501,7 @@
         "tags": [
           "Navbar"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       }
     },
     "/nima-uchun-biz": {
@@ -7143,7 +6939,13 @@
           "instagramm_link",
           "chat_link",
           "Navbar_image",
-          "navbar_text"
+          "navbar_text",
+          "menu1",
+          "menu2",
+          "menu3",
+          "menu4",
+          "menu5",
+          "menu6"
         ],
         "properties": {
           "id": {
@@ -7304,6 +7106,30 @@
             "maxLength": 5000,
             "minLength": 1
           },
+          "menu1": {
+            "type": "string",
+            "default": "Каталог"
+          },
+          "menu2": {
+            "type": "string",
+            "default": "О нас"
+          },
+          "menu3": {
+            "type": "string",
+            "default": "Услуги"
+          },
+          "menu4": {
+            "type": "string",
+            "default": "Наши работы"
+          },
+          "menu5": {
+            "type": "string",
+            "default": "Отзывы"
+          },
+          "menu6": {
+            "type": "string",
+            "default": "Контакты"
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -7315,7 +7141,13 @@
                 "instagramm_link",
                 "chat_link",
                 "Navbar_image",
-                "navbar_text"
+                "navbar_text",
+                "menu1",
+                "menu2",
+                "menu3",
+                "menu4",
+                "menu5",
+                "menu6"
               ],
               "properties": {
                 "id": {
@@ -7340,6 +7172,24 @@
                   "type": "string"
                 },
                 "navbar_text": {
+                  "type": "string"
+                },
+                "menu1": {
+                  "type": "string"
+                },
+                "menu2": {
+                  "type": "string"
+                },
+                "menu3": {
+                  "type": "string"
+                },
+                "menu4": {
+                  "type": "string"
+                },
+                "menu5": {
+                  "type": "string"
+                },
+                "menu6": {
                   "type": "string"
                 },
                 "localizations": {
@@ -7371,7 +7221,13 @@
           "navbar_Title",
           "instagramm_link",
           "chat_link",
-          "navbar_text"
+          "navbar_text",
+          "menu1",
+          "menu2",
+          "menu3",
+          "menu4",
+          "menu5",
+          "menu6"
         ],
         "properties": {
           "navbar_phone_number": {
@@ -7394,6 +7250,30 @@
             "type": "string",
             "maxLength": 5000,
             "minLength": 1
+          },
+          "menu1": {
+            "type": "string",
+            "default": "Каталог"
+          },
+          "menu2": {
+            "type": "string",
+            "default": "О нас"
+          },
+          "menu3": {
+            "type": "string",
+            "default": "Услуги"
+          },
+          "menu4": {
+            "type": "string",
+            "default": "Наши работы"
+          },
+          "menu5": {
+            "type": "string",
+            "default": "Отзывы"
+          },
+          "menu6": {
+            "type": "string",
+            "default": "Контакты"
           },
           "localizations": {
             "type": "array",

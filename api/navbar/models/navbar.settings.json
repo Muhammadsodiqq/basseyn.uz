@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "navbar",
   "info": {
     "name": "Navbar",
@@ -94,6 +94,66 @@
       "required": true,
       "maxLength": 5000,
       "minLength": 1
+    },
+    "menu1": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "default": "Каталог"
+    },
+    "menu2": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "О нас",
+      "required": true
+    },
+    "menu3": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Услуги",
+      "required": true
+    },
+    "menu4": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Наши работы",
+      "required": true
+    },
+    "menu5": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Отзывы",
+      "required": true
+    },
+    "menu6": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Контакты",
+      "required": true
     }
   }
 }
