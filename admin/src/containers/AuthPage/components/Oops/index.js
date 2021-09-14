@@ -24,7 +24,7 @@ const Oops = () => {
   return (
     <>
       <Section textAlign="center">
-        <Logo />
+        {/* <Logo /> */}
       </Section>
       <Section withBackground textAlign="center">
         <BaselineAlignment top size="25px">

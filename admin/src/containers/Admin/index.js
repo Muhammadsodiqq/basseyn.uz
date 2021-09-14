@@ -277,11 +277,11 @@ export class Admin extends React.Component {
                       <InstalledPluginsPage />
                     </CheckPagePermissions>
                   </Route>
-                  <Route path="/marketplace">
+                  {/* <Route path="/marketplace">
                     <CheckPagePermissions permissions={adminPermissions.marketplace.main}>
-                      <MarketplacePage />
-                    </CheckPagePermissions>
-                  </Route>
+                      {/* <MarketplacePage /> */}
+                    {/* </CheckPagePermissions> */}
+                  {/* </Route> */}
                   <Route
                     path={`${SETTINGS_BASE_URL || '/settings'}/:settingId`}
                     component={SettingsPage}

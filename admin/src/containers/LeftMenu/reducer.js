@@ -18,7 +18,7 @@ const initialState = {
       destination: '/list-plugins',
       isDisplayed: false,
       permissions: adminPermissions.marketplace.main,
-      notificationsCount: 0,
+      notificationsCount: 0,  
     },
     {
       icon: 'shopping-basket',
@@ -41,7 +41,7 @@ const initialState = {
   ],
   singleTypesSectionLinks: [],
   pluginsSectionLinks: [],
-  isLoading: true,
+  isLoading: false,
 };
 
 const reducer = (state = initialState, action) =>

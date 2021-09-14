@@ -49,7 +49,7 @@ const Register = ({
   return (
     <>
       <Section textAlign="center">
-        <Logo />
+        {/* <Logo /> */}
       </Section>
       <Section withBackground>
         <Padded top size="25px">

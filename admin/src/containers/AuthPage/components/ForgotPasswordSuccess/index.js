@@ -20,7 +20,6 @@ const ForgotPasswordSuccess = () => {
   return (
     <>
       <Section textAlign="center">
-        <Logo />
       </Section>
       <Section withBackground textAlign="center">
         <Padded top size="smd">

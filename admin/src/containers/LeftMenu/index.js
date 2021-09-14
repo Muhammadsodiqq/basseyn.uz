@@ -19,7 +19,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
       isLoading,
       collectionTypesSectionLinks,
       singleTypesSectionLinks,
-      generalSectionLinks,
+      // generalSectionLinks,
       pluginsSectionLinks,
     },
     toggleLoading,
@@ -76,7 +76,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             emptyLinksListMessage="app.components.LeftMenuLinkContainer.noPluginsInstalled"
           />
         )}
-        {generalSectionLinks.length > 0 && (
+        {/* {generalSectionLinks.length > 0 && (
           <LeftMenuLinksSection
             section="general"
             name="general"
@@ -84,7 +84,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             location={location}
             searchable={false}
           />
-        )}
+        )} */}
       </LinksContainer>
       <LeftMenuFooter key="footer" version={version} />
     </Wrapper>

@@ -120,13 +120,6 @@ const OnboardingVideos = () => {
         </ul>
         <StaticLinks />
       </div>
-      <div className="openBtn">
-        <button onClick={handleClick} className={isOpen ? 'active' : ''} type="button">
-          <FontAwesomeIcon icon={faQuestion} />
-          <FontAwesomeIcon icon={faTimes} />
-          <span />
-        </button>
-      </div>
     </Wrapper>
   );
 };

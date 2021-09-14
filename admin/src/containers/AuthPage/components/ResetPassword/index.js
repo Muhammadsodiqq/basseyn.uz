@@ -17,7 +17,7 @@ const ResetPassword = ({ formErrors, modifiedData, onChange, onSubmit, requestEr
   return (
     <>
       <Section textAlign="center">
-        <Logo />
+        {/* <Logo /> */}
       </Section>
       <Section withBackground>
         <BaselineAlignment top size="25px">

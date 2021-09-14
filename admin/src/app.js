@@ -189,9 +189,9 @@ window.strapi = Object.assign(window.strapi || {}, {
     translationMessages: translationMessagesUpdated => {
       render(merge({}, translationMessages, translationMessagesUpdated));
     },
-    leftMenuSections: leftMenuSectionsUpdated => {
-      store.dispatch(updatePlugin(pluginId, 'leftMenuSections', leftMenuSectionsUpdated));
-    },
+    // leftMenuSections: leftMenuSectionsUpdated => {
+    //   store.dispatch(updatePlugin(pluginId, 'leftMenuSections', leftMenuSectionsUpdated));
+    // },
   }),
   router: history,
   languages,

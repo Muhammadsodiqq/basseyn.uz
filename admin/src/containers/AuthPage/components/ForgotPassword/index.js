@@ -16,7 +16,6 @@ const ForgotPassword = ({ formErrors, modifiedData, onChange, onSubmit }) => {
   return (
     <>
       <Section textAlign="center">
-        <Logo />
       </Section>
       <Section withBackground>
         {/* FIXME IN BUFFET.JS */}
