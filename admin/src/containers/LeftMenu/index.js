@@ -72,7 +72,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             name="plugins"
             links={pluginsSectionLinks}
             location={location}
-            searchable={false}
+            searchable={false},
             emptyLinksListMessage="app.components.LeftMenuLinkContainer.noPluginsInstalled"
           />
         )}
