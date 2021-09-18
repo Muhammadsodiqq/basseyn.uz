@@ -66,7 +66,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
           />
         )}
 
-        {pluginsSectionLinks.length > 0 && (
+        {/* {pluginsSectionLinks.length > 0 && (
           <LeftMenuLinksSection
             section="plugins"
             name="plugins"
@@ -84,7 +84,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             location={location}
             searchable={false}
           />
-        )}
+        )} */}
       </LinksContainer>
       <LeftMenuFooter key="footer" version={version} />
     </Wrapper>
