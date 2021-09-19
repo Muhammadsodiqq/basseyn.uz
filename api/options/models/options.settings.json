@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "Kataloglar",
+  "collectionName": "options",
   "info": {
-    "name": "catalog"
+    "name": "options"
   },
   "options": {
     "increments": true,
@@ -15,19 +15,15 @@
     }
   },
   "attributes": {
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true,
+    "Katalogg": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "basseyn.katalogg"
     }
   }
 }

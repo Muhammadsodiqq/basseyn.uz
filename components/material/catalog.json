@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_material_catalogs",
+  "info": {
+    "name": "catalog",
+    "icon": "comment-medical",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "material": {
+      "type": "string",
+      "required": true
+    },
+    "basseyn": {
+      "type": "string"
+    },
+    "shakl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_basseyn_katalogs",
+  "info": {
+    "name": "katalog",
+    "icon": "copy"
+  },
+  "options": {},
+  "attributes": {
+    "basseyn": {
+      "type": "string"
+    },
+    "material": {
+      "type": "string"
+    },
+    "shakl": {
+      "type": "string"
+    }
+  }
+}
