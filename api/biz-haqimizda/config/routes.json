@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/biz-haqimizdas",
+      "handler": "biz-haqimizda.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/biz-haqimizdas/count",
+      "handler": "biz-haqimizda.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/biz-haqimizdas/:id",
+      "handler": "biz-haqimizda.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/biz-haqimizdas",
+      "handler": "biz-haqimizda.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/biz-haqimizdas/:id",
+      "handler": "biz-haqimizda.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/biz-haqimizdas/:id",
+      "handler": "biz-haqimizda.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "About_us",
+  "collectionName": "biz_haqimizda",
   "info": {
-    "name": "About_us",
-    "description": ""
+    "name": "biz_haqimizda"
   },
   "options": {
     "increments": true,
@@ -32,7 +31,7 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
