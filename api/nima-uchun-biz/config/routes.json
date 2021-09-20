@@ -2,15 +2,39 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/nima-uchun-biz",
+      "path": "/nima-uchun-bizs",
       "handler": "nima-uchun-biz.find",
       "config": {
         "policies": []
       }
     },
     {
+      "method": "GET",
+      "path": "/nima-uchun-bizs/count",
+      "handler": "nima-uchun-biz.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nima-uchun-bizs/:id",
+      "handler": "nima-uchun-biz.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nima-uchun-bizs",
+      "handler": "nima-uchun-biz.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
-      "path": "/nima-uchun-biz",
+      "path": "/nima-uchun-bizs/:id",
       "handler": "nima-uchun-biz.update",
       "config": {
         "policies": []
@@ -18,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/nima-uchun-biz",
+      "path": "/nima-uchun-bizs/:id",
       "handler": "nima-uchun-biz.delete",
       "config": {
         "policies": []

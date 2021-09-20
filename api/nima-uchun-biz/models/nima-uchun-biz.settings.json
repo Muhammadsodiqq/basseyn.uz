@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "nima_uchun_biz",
   "info": {
     "name": "nima_uchun_biz",

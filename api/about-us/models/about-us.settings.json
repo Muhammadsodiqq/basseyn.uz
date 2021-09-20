@@ -1,0 +1,14 @@
+{
+  "collectionName": "about_uses",
+  "info": {
+    "name": "about-us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {}
+}

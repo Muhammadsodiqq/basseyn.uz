@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/kontakt": {
+    "/kantakts": {
       "get": {
         "deprecated": false,
-        "description": "Find all the kontakt's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve kontakt document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Kontakt"
+                    "$ref": "#/components/schemas/Kantakt"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Kontakt"
+          "Kantakt"
         ],
         "parameters": [
           {
@@ -192,16 +192,16 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single kontakt record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve kontakt document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Kontakt"
+                  "$ref": "#/components/schemas/Kantakt"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Kontakt"
+          "Kantakt"
         ],
         "requestBody": {
           "description": "",
@@ -247,19 +247,212 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewKontakt"
+                "$ref": "#/components/schemas/NewKantakt"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/kantakts/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "Kantakt"
+        ],
         "parameters": []
+      }
+    },
+    "/kantakts/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kantakt"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Kantakt"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kantakt"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Kantakt"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewKantakt"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single kontakt record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single kontakt based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -302,30 +495,43 @@
         },
         "summary": "",
         "tags": [
-          "Kontakt"
+          "Kantakt"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
-      "Kontakt": {
+      "Kantakt": {
         "required": [
           "id",
-          "murojaat_qilish_vaqti",
+          "social_link",
+          "link",
           "phone_number_1",
           "phone_number_2",
-          "social",
-          "link"
+          "murojaat_qilish_vaqti"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "murojaat_qilish_vaqti": {
-            "type": "string",
-            "default": "8:00-23:00"
+          "social_link": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
           },
           "phone_number_1": {
             "type": "string"
@@ -333,29 +539,29 @@
           "phone_number_2": {
             "type": "string"
           },
-          "social": {
+          "murojaat_qilish_vaqti": {
             "type": "string",
-            "default": "Написать в Инстаграм"
-          },
-          "link": {
-            "type": "string"
+            "default": "8:00-23-00"
           },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "murojaat_qilish_vaqti",
+                "social_link",
+                "link",
                 "phone_number_1",
                 "phone_number_2",
-                "social",
-                "link"
+                "murojaat_qilish_vaqti"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "murojaat_qilish_vaqti": {
+                "social_link": {
+                  "type": "string"
+                },
+                "link": {
                   "type": "string"
                 },
                 "phone_number_1": {
@@ -364,10 +570,7 @@
                 "phone_number_2": {
                   "type": "string"
                 },
-                "social": {
-                  "type": "string"
-                },
-                "link": {
+                "murojaat_qilish_vaqti": {
                   "type": "string"
                 },
                 "localizations": {
@@ -393,18 +596,20 @@
           }
         }
       },
-      "NewKontakt": {
+      "NewKantakt": {
         "required": [
-          "murojaat_qilish_vaqti",
+          "social_link",
+          "link",
           "phone_number_1",
           "phone_number_2",
-          "social",
-          "link"
+          "murojaat_qilish_vaqti"
         ],
         "properties": {
-          "murojaat_qilish_vaqti": {
-            "type": "string",
-            "default": "8:00-23:00"
+          "social_link": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
           },
           "phone_number_1": {
             "type": "string"
@@ -412,12 +617,9 @@
           "phone_number_2": {
             "type": "string"
           },
-          "social": {
+          "murojaat_qilish_vaqti": {
             "type": "string",
-            "default": "Написать в Инстаграм"
-          },
-          "link": {
-            "type": "string"
+            "default": "8:00-23-00"
           },
           "localizations": {
             "type": "array",
@@ -440,7 +642,7 @@
   },
   "tags": [
     {
-      "name": "Kontakt"
+      "name": "Kantakt"
     }
   ]
 }

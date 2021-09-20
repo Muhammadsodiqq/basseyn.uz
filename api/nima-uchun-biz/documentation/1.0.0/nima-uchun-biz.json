@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/nima-uchun-biz": {
+    "/nima-uchun-bizs": {
       "get": {
         "deprecated": false,
-        "description": "Find all the nima-uchun-biz's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve nima-uchun-biz document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -193,12 +193,202 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single nima-uchun-biz record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve nima-uchun-biz document(s)",
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Nima-uchun-biz"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewNima-uchun-biz"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nima-uchun-bizs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Nima-uchun-biz"
+        ],
+        "parameters": []
+      }
+    },
+    "/nima-uchun-bizs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Nima-uchun-biz"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -257,14 +447,25 @@
             }
           }
         },
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single nima-uchun-biz record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single nima-uchun-biz based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -309,7 +510,18 @@
         "tags": [
           "Nima-uchun-biz"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     }
   },
@@ -318,15 +530,12 @@
       "Nima-uchun-biz": {
         "required": [
           "id",
-          "text",
           "avtor",
-          "rasm"
+          "rasm",
+          "text"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "text": {
             "type": "string"
           },
           "avtor": {
@@ -399,26 +608,29 @@
               }
             }
           },
+          "text": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "text",
                 "avtor",
-                "rasm"
+                "rasm",
+                "text"
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "text": {
                   "type": "string"
                 },
                 "avtor": {
                   "type": "string"
                 },
                 "rasm": {
+                  "type": "string"
+                },
+                "text": {
                   "type": "string"
                 },
                 "localizations": {
@@ -446,14 +658,14 @@
       },
       "NewNima-uchun-biz": {
         "required": [
-          "text",
-          "avtor"
+          "avtor",
+          "text"
         ],
         "properties": {
-          "text": {
+          "avtor": {
             "type": "string"
           },
-          "avtor": {
+          "text": {
             "type": "string"
           },
           "localizations": {

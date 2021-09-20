@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/statistics",
-      "handler": "statistic.find",
+      "path": "/kantakts",
+      "handler": "kantakt.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/statistics/count",
-      "handler": "statistic.count",
+      "path": "/kantakts/count",
+      "handler": "kantakt.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/statistics/:id",
-      "handler": "statistic.findOne",
+      "path": "/kantakts/:id",
+      "handler": "kantakt.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/statistics",
-      "handler": "statistic.create",
+      "path": "/kantakts",
+      "handler": "kantakt.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/statistics/:id",
-      "handler": "statistic.update",
+      "path": "/kantakts/:id",
+      "handler": "kantakt.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/statistics/:id",
-      "handler": "statistic.delete",
+      "path": "/kantakts/:id",
+      "handler": "kantakt.delete",
       "config": {
         "policies": []
       }

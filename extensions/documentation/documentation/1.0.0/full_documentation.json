@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/19/2021 9:43:46 PM"
+    "x-generation-date": "09/20/2021 10:33:41 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,13 +45,13 @@
     }
   ],
   "paths": {
-    "/about-uz": {
+    "/about-uses": {
       "get": {
         "deprecated": false,
-        "description": "Find all the about-uz's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve about-uz document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -97,7 +97,7 @@
         },
         "summary": "",
         "tags": [
-          "About-uz"
+          "About-us"
         ],
         "parameters": [
           {
@@ -238,12 +238,12 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single about-uz record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve about-uz document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -289,7 +289,7 @@
         },
         "summary": "",
         "tags": [
-          "About-uz"
+          "About-us"
         ],
         "requestBody": {
           "description": "",
@@ -297,19 +297,220 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAbout-uz"
+                "$ref": "#/components/schemas/NewAbout-us"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/about-uses/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "About-us"
+        ],
         "parameters": []
+      }
+    },
+    "/about-uses/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "About-us"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "About-us"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewAbout-us"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single about-uz record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single about-uz based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -352,9 +553,20 @@
         },
         "summary": "",
         "tags": [
-          "About-uz"
+          "About-us"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/afzalliklars": {
@@ -1379,19 +1591,19 @@
         ]
       }
     },
-    "/kontakt": {
+    "/kantakts": {
       "get": {
         "deprecated": false,
-        "description": "Find all the kontakt's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve kontakt document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Kontakt"
+                    "$ref": "#/components/schemas/Kantakt"
                   }
                 }
               }
@@ -1430,7 +1642,7 @@
         },
         "summary": "",
         "tags": [
-          "Kontakt"
+          "Kantakt"
         ],
         "parameters": [
           {
@@ -1571,16 +1783,16 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single kontakt record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve kontakt document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Kontakt"
+                  "$ref": "#/components/schemas/Kantakt"
                 }
               }
             }
@@ -1618,7 +1830,7 @@
         },
         "summary": "",
         "tags": [
-          "Kontakt"
+          "Kantakt"
         ],
         "requestBody": {
           "description": "",
@@ -1626,19 +1838,212 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewKontakt"
+                "$ref": "#/components/schemas/NewKantakt"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/kantakts/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "Kantakt"
+        ],
         "parameters": []
+      }
+    },
+    "/kantakts/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kantakt"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Kantakt"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kantakt"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Kantakt"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewKantakt"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single kontakt record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single kontakt based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -1681,9 +2086,20 @@
         },
         "summary": "",
         "tags": [
-          "Kontakt"
+          "Kantakt"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/murojaats": {
@@ -2197,13 +2613,13 @@
         ]
       }
     },
-    "/navbar": {
+    "/navbars": {
       "get": {
         "deprecated": false,
-        "description": "Find all the navbar's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve navbar document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -2389,12 +2805,194 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single navbar record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve navbar document(s)",
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Navbar"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Navbar"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewNavbar"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/navbars/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Navbar"
+        ],
+        "parameters": []
+      }
+    },
+    "/navbars/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Navbar"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Navbar"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -2449,14 +3047,25 @@
             }
           }
         },
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single navbar record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single navbar based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -2501,16 +3110,27 @@
         "tags": [
           "Navbar"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
-    "/nima-uchun-biz": {
+    "/nima-uchun-bizs": {
       "get": {
         "deprecated": false,
-        "description": "Find all the nima-uchun-biz's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve nima-uchun-biz document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -2697,12 +3317,202 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single nima-uchun-biz record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve nima-uchun-biz document(s)",
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Nima-uchun-biz"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewNima-uchun-biz"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nima-uchun-bizs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Nima-uchun-biz"
+        ],
+        "parameters": []
+      }
+    },
+    "/nima-uchun-bizs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Nima-uchun-biz"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -2761,14 +3571,25 @@
             }
           }
         },
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single nima-uchun-biz record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single nima-uchun-biz based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -2813,7 +3634,18 @@
         "tags": [
           "Nima-uchun-biz"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/options": {
@@ -3838,13 +4670,13 @@
         ]
       }
     },
-    "/statistic": {
+    "/statistics": {
       "get": {
         "deprecated": false,
-        "description": "Find all the statistic's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve statistic document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -4030,12 +4862,194 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single statistic record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve statistic document(s)",
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistic"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Statistic"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewStatistic"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/statistics/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Statistic"
+        ],
+        "parameters": []
+      }
+    },
+    "/statistics/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistic"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Statistic"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -4090,14 +5104,25 @@
             }
           }
         },
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single statistic record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single statistic based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -4142,7 +5167,18 @@
         "tags": [
           "Statistic"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/xizmatlars": {
@@ -6885,142 +7921,18 @@
   },
   "components": {
     "schemas": {
-      "About-uz": {
+      "About-us": {
         "required": [
-          "id",
-          "text"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "text": {
-            "type": "string"
-          },
-          "video": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "text"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "text": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "locale": {
-            "type": "string"
           }
         }
       },
-      "NewAbout-uz": {
-        "required": [
-          "text"
-        ],
+      "NewAbout-us": {
         "properties": {
-          "text": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "locale": {
-            "type": "string"
-          },
           "created_by": {
             "type": "string"
           },
@@ -7269,22 +8181,24 @@
           }
         }
       },
-      "Kontakt": {
+      "Kantakt": {
         "required": [
           "id",
-          "murojaat_qilish_vaqti",
+          "social_link",
+          "link",
           "phone_number_1",
           "phone_number_2",
-          "social",
-          "link"
+          "murojaat_qilish_vaqti"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "murojaat_qilish_vaqti": {
-            "type": "string",
-            "default": "8:00-23:00"
+          "social_link": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
           },
           "phone_number_1": {
             "type": "string"
@@ -7292,29 +8206,29 @@
           "phone_number_2": {
             "type": "string"
           },
-          "social": {
+          "murojaat_qilish_vaqti": {
             "type": "string",
-            "default": "Написать в Инстаграм"
-          },
-          "link": {
-            "type": "string"
+            "default": "8:00-23-00"
           },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "murojaat_qilish_vaqti",
+                "social_link",
+                "link",
                 "phone_number_1",
                 "phone_number_2",
-                "social",
-                "link"
+                "murojaat_qilish_vaqti"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "murojaat_qilish_vaqti": {
+                "social_link": {
+                  "type": "string"
+                },
+                "link": {
                   "type": "string"
                 },
                 "phone_number_1": {
@@ -7323,10 +8237,7 @@
                 "phone_number_2": {
                   "type": "string"
                 },
-                "social": {
-                  "type": "string"
-                },
-                "link": {
+                "murojaat_qilish_vaqti": {
                   "type": "string"
                 },
                 "localizations": {
@@ -7352,18 +8263,20 @@
           }
         }
       },
-      "NewKontakt": {
+      "NewKantakt": {
         "required": [
-          "murojaat_qilish_vaqti",
+          "social_link",
+          "link",
           "phone_number_1",
           "phone_number_2",
-          "social",
-          "link"
+          "murojaat_qilish_vaqti"
         ],
         "properties": {
-          "murojaat_qilish_vaqti": {
-            "type": "string",
-            "default": "8:00-23:00"
+          "social_link": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
           },
           "phone_number_1": {
             "type": "string"
@@ -7371,12 +8284,9 @@
           "phone_number_2": {
             "type": "string"
           },
-          "social": {
+          "murojaat_qilish_vaqti": {
             "type": "string",
-            "default": "Написать в Инстаграм"
-          },
-          "link": {
-            "type": "string"
+            "default": "8:00-23-00"
           },
           "localizations": {
             "type": "array",
@@ -7806,15 +8716,12 @@
       "Nima-uchun-biz": {
         "required": [
           "id",
-          "text",
           "avtor",
-          "rasm"
+          "rasm",
+          "text"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "text": {
             "type": "string"
           },
           "avtor": {
@@ -7887,26 +8794,29 @@
               }
             }
           },
+          "text": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "text",
                 "avtor",
-                "rasm"
+                "rasm",
+                "text"
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "text": {
                   "type": "string"
                 },
                 "avtor": {
                   "type": "string"
                 },
                 "rasm": {
+                  "type": "string"
+                },
+                "text": {
                   "type": "string"
                 },
                 "localizations": {
@@ -7934,14 +8844,14 @@
       },
       "NewNima-uchun-biz": {
         "required": [
-          "text",
-          "avtor"
+          "avtor",
+          "text"
         ],
         "properties": {
-          "text": {
+          "avtor": {
             "type": "string"
           },
-          "avtor": {
+          "text": {
             "type": "string"
           },
           "localizations": {
@@ -8776,7 +9686,7 @@
       "name": "Ishlarimiz"
     },
     {
-      "name": "Kontakt"
+      "name": "Kantakt"
     },
     {
       "name": "Murojaat"
